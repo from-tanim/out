@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Email Notification</title>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <h1>Send Email Notification</h1>
+    <button id="sendEmail">I'm Outside</button>
+
+    <script>
+        (function() {
+            emailjs.init("laSAvOUmzQXZgxVMa"); // Replace with your EmailJS user ID
+        })();
+
+        document.getElementById('sendEmail').addEventListener('click', function() {
+            const templateParams = {
+                to_email: 'tanimhossain2021@gmail.com', // Replace with the recipient's email
+            };
+
+            emailjs.send('service_aicy44q', 'template_71hqiv8', templateParams)
+                .then(function(response) {
+                    alert('Email sent successfully!');
+                }, function(error) {
+                    alert('Failed to send email: ' + JSON.stringify(error));
+                });
+        });
+    </script>
+</body>
+</html>
