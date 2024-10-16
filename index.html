@@ -1,20 +1,35 @@
-<html>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Email Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+</head>
+<body>
 
-<form id="form">
-  <div class="field">
-    <label for="reply_to">reply_to</label>
-    <input type="text" name="reply_to" id="reply_to">
+  <div class="container">
+    <form id="form">
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="field">
+        <input type="submit" id="button" value="Send Email">
+      </div>
+    </form>
   </div>
 
-  <input type="submit" id="button" value="Send Email" >
-</form>
-
-<script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script type="text/javascript">
-  emailjs.init('EZe5hl0oYv4AfvvZg')
-</script>
-    </body>
+  <script src="script.js"></script>
+  <script>
+    emailjs.init('EZe5hl0oYv4AfvvZg'); // Replace 'YOUR_USER_ID' with your actual EmailJS user ID
+  </script>
+  
+</body>
 </html>
