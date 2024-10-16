@@ -17,7 +17,7 @@
 
         document.getElementById('sendEmail').addEventListener('click', function() {
             const templateParams = {
-                to_email: 'tanimhossain2021@gmail.com', // Replace with the recipient's email
+                to_email: 'h.tanim@outlook.com', // Replace with the recipient's email
             };
 
             emailjs.send('service_aicy44q', 'template_71hqiv8', templateParams)
@@ -27,19 +27,6 @@
                     alert('Failed to send email: ' + JSON.stringify(error));
                 });
         });
-
     </script>
-
-<script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "EZe5hl0oYv4AfvvZg",
-      });
-   })();
-</script>
-    
 </body>
 </html>
