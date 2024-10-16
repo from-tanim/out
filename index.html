@@ -1,32 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Send Email Notification</title>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-</head>
-<body>
-    <h1>Send Email Notification</h1>
-    <button id="sendEmail">I'm Outside</button>
+<html>
+    <body>
 
-    <script>
-        (function() {
-            emailjs.init("EZe5hl0oYv4AfvvZg"); // Replace with your EmailJS user ID
-        })();
+<form id="form">
+  <div class="field">
+    <label for="reply_to">reply_to</label>
+    <input type="text" name="reply_to" id="reply_to">
+  </div>
 
-        document.getElementById('sendEmail').addEventListener('click', function() {
-            const templateParams = {
-                to_email: 'h.tanim@outlook.com', // Replace with the recipient's email
-            };
+  <input type="submit" id="button" value="Send Email" >
+</form>
 
-            emailjs.send('service_aicy44q', 'template_71hqiv8', templateParams)
-                .then(function(response) {
-                    alert('Email sent successfully!');
-                }, function(error) {
-                    alert('Failed to send email: ' + JSON.stringify(error));
-                });
-        });
-    </script>
-</body>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('EZe5hl0oYv4AfvvZg')
+</script>
+    </body>
 </html>
