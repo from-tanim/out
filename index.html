@@ -12,7 +12,7 @@
 
     <script>
         (function() {
-            emailjs.init("laSAvOUmzQXZgxVMa"); // Replace with your EmailJS user ID
+            emailjs.init("EZe5hl0oYv4AfvvZg"); // Replace with your EmailJS user ID
         })();
 
         document.getElementById('sendEmail').addEventListener('click', function() {
@@ -27,6 +27,19 @@
                     alert('Failed to send email: ' + JSON.stringify(error));
                 });
         });
+
     </script>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "EZe5hl0oYv4AfvvZg",
+      });
+   })();
+</script>
+    
 </body>
 </html>
